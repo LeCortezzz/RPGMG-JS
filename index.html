@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>RPG Music Generator</title>
+    <style>
+         body {
+        font-family: 'Press Start 2P', cursive;
+        background: #3e2c23;
+        color: #2c1b15;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+
+    .containerMenu {
+        background: #f5e0c3;
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 300px;
+        width: 100%;
+        text-align: center;
+        border: 3px solid #7a4c2c;
+        max-height: 350px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+
+    }
+    .containerIndex{
+        background: #f5e0c3;
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        border: 3px solid #7a4c2c;
+        max-height: auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+
+    }
+    li{
+        margin-bottom: 10px;
+    }
+    select{
+        width: 100%;
+        font-weight: bold;
+        border-radius: 8px;
+        background: #fff8e6;
+        border: none;
+        outline: none;
+
+    }
+    button{
+        font-size: 20px;
+        border-radius: 8px;
+        border-color: #d3d88a;
+        outline: none;
+        font-weight: bold;
+        width: 100px;
+        height: 50px;
+        cursor: pointer;
+        transition: 1s;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    button:hover{
+        background-color: #ffdf87;
+        transform: scale(1.05);
+    }
+
+    label{
+        display: block;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<style>
+   
+</style>
+<body>
+    <div class="containerMenu">
+    <h1>Crie a playlist do seu personagem</h1>
+    <form id="musicForm">
+        <label>Raça:</label>
+            <select id="race">
+            <option value="Elfo">Elfo</option>
+            <option value="Humano">Humano</option>
+            <option value="Goblin">Goblin</option>
+        </select>
+    <br><br>
+
+        <label>Classe:</label>
+            <select id="classe">
+            <option value="Barbaro">Bárbaro</option>
+            <option value="Mago">Mago</option>
+            <option value="Arqueiro">Arqueiro</option>
+        </select>
+    <br><br>
+
+        <label>Alinhamento:</label>
+            <select id="alignment">
+            <option value="Bom">Bom</option>
+            <option value="Neutro">Neutro</option>
+            <option value="Mau">Mau</option>
+        </select>
+    <br><br>
+
+        <button type="submit">▶︎</button>
+    </form>
+    </div>
+
+    <div id="result"></div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
