@@ -6,8 +6,8 @@ document.getElementById("musicForm").addEventListener("submit", (e) => {e.preven
     const alignment = document.getElementById("alignment").value;
     
     const result = document.getElementById("result");
-    const text = `
 
+    result.innerHTML = `
 
 
     <h2>Você escolheu: </h2>
@@ -22,19 +22,4 @@ document.getElementById("musicForm").addEventListener("submit", (e) => {e.preven
 
 
 `;
-
-        result.style.display = "block";
-        result.innerHTML = "";
-
-        let i = 0;
-
-        function type() {
-            if (i < text.length) {
-                result.innerHTML += text[i];
-                i++;
-                setTimeout(type , 25);
-
-            }
-        }
-        type();
 });

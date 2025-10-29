@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>RPG Music Generator</title>
     <style>
-    body {
+         body {
         font-family: 'Press Start 2P', cursive;
         background: #3e2c23;
         color: #2c1b15;
@@ -17,11 +17,13 @@
         height: 100vh;
         margin: 0;
     }
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .modal{
+        position: fixed;
+        display: none;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        
     }
 
     .containerMenu {
@@ -82,25 +84,12 @@
         display: block;
         font-weight: bold;
     }
-    #result{
-        display: none;
-        margin-top: 20px;
-        font-size: 12px;
-        background: #f5e0c3;
-        padding: 30px;
-        border-radius: 15px;
-        width: 100%;
-        text-align: center;
-        border: 3px solid #7a4c2c;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    }
     </style>
 </head>
 <style>
    
 </style>
 <body>
-<div class="wrapper">
     <div class="containerMenu">
     <h1>Crie a playlist do seu personagem</h1>
     <form id="musicForm">
@@ -130,12 +119,21 @@
 
         <button type="submit">▶︎</button>
     </form>
-    
-    </div>
-    <div id="result"></div>
     </div>
 
-    
+    <div id="resultModal" class="modal"> 
+        <div class="containerIndex">
+        <h2>Você escolheu:</h2>
+        <ul id="resultList"></ul>
+        <br>
+        <button id="closeModal">Voltar</button>
+    </div>
+
+    </div>
+
+
+
+    <div id="result"></div>
     
     <script src="script.js"></script>
 
